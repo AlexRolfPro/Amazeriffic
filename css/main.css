@@ -12,6 +12,7 @@ body {
 
 .page-header, .main, .page-footer {
   min-width: 855px;
+  padding: 0 10px;
   overflow: auto;
 }
 
@@ -21,18 +22,37 @@ body {
 
 .main {
   background: #fff;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
 }
 
 .page-header {
 
 }
 
-.logo-header {
+.logo-header,
+.left-colum {
   width: 570px;
   float: left;
 }
 
-.nav-header {
+.nav-header,
+.right-colum {
   width: 285px;
   float: right;
+}
+
+.nav-header__item {
+  display: inline-block;
+}
+
+.sitemap__list,
+.nav-header__list {
+  list-style: none;
+  padding: 0;
+}
+
+.sitemap__item {
+  display: inline-block;
+  width: 49%;
 }
