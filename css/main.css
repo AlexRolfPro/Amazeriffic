@@ -16,6 +16,20 @@ body {
   overflow: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
 .page-header {
   background: #fff;
 }
@@ -26,18 +40,20 @@ body {
   border-bottom: 2px solid gray;
 }
 
-.page-header {
-
+.logo-header {
+  font-style: italic;
 }
 
 .logo-header,
-.left-colum {
+.page-footer__left-colum,
+.main__left-colum {
   width: 570px;
   float: left;
 }
 
 .nav-header,
-.right-colum {
+.page-footer__right-colum,
+.main__right-colum {
   width: 285px;
   float: right;
 }
@@ -46,10 +62,24 @@ body {
   display: inline-block;
 }
 
+.main__left-colum {
+  width: 550px;
+  padding-left: 20px;
+}
+
+.main-list {
+  padding-left: 17px;
+  list-style: circle;
+}
+
 .sitemap__list,
 .nav-header__list {
   list-style: none;
   padding: 0;
+}
+
+.contact__text {
+  margin: 0;
 }
 
 .sitemap__item {
