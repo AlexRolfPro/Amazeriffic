@@ -108,15 +108,27 @@ a:hover {
 
 .comment__input {
   float: left;
-  width: 50%;
+  width: 35%;
 }
 
 .comment__comments {
   float: left;
-  width: 50%;
+  width: 65%;
 }
 
 .main__info {
   width: 50%;
   font-style: italic;
+}
+
+.comment__input-text {
+  width: 75%;
+}
+
+.comment__input-text:hover {
+  border: 2px solid #aaa;
+}
+
+.comment__input-text:focus {
+  outline: 2px solid red;
 }
