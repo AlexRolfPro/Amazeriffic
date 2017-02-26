@@ -132,3 +132,14 @@ a:hover {
 .comment__input-text:focus {
   outline: 2px solid red;
 }
+
+.comment__comments p {
+  border-radius: 0 6px 6px 0;
+}
+
+.comment__comments p:nth-child(even) {
+ background: lavender;
+}
+.comment__comments p:nth-child(odd) {
+ background: gainsboro;
+}
