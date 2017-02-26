@@ -86,3 +86,37 @@ a:hover {
   display: inline-block;
   width: 49%;
 }
+
+/*-----comment.html css-------*/
+
+.main__heading h2 {
+  margin-bottom: 0;
+}
+
+.main__heading p {
+  width: 50%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.comment {
+  overflow: auto;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+}
+
+.comment__input {
+  float: left;
+  width: 50%;
+}
+
+.comment__comments {
+  float: left;
+  width: 50%;
+}
+
+.main__info {
+  width: 50%;
+  font-style: italic;
+}
