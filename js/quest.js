@@ -73,13 +73,22 @@ var main = function () {
  // чтобы избежать постоянного обновления
    var $element = $(element);
    var $content;
+   var i;
    $(".quest__tabs .quest__tab").removeClass("quest__tab_active");
    $element.addClass("quest__tab_active");
    $(".main .quest__content").empty();
     if ($element.parent().is(":nth-child(1)")) {
-      console.log("Щелчок на первой вкладке!");
+      $content = $("<ul>");
+      for (i = toDos.length - 1; i >= 0; i--) {
+       $content.append($("<li>").text(toDos[i]));
+       $(".main .quest__content").append($content);
+      }
     } else if ($element.parent().is(":nth-child(2)")) {
-      console.log("Щелчок на второй вкладке!");
+      $content = $("<ul>");
+      toDos.forEach(function (toDo) {
+       $content.append($("<li>").text(toDo));
+      });
+      $(".main .quest__content").append($content);
     } else if ($element.parent().is(":nth-child(3)")) {
       console.log("Щелчок на третьей вкладке!");
     }
