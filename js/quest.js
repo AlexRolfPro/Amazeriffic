@@ -46,14 +46,45 @@ var main = function () {
 // }
 
 // 4
-$(".quest__tabs .quest__tab").toArray().forEach(function (element) {
- // создаем обработчик щелчков для этого элемента
-   $(element).on("click", function () {
-     $(".quest__tabs .quest__tab").removeClass("quest__tab_active");
-       $(element).addClass("quest__tab_active");
-        $(".main .quest__content").empty();
-          return false;
-         });
+// $(".quest__tabs .quest__tab").toArray().forEach(function (element) {
+//  // создаем обработчик щелчков для этого элемента
+//    $(element).on("click", function () {
+//      $(".quest__tabs .quest__tab").removeClass("quest__tab_active");
+//        $(element).addClass("quest__tab_active");
+//         $(".main .quest__content").empty();
+//           return false;
+//          });
+//  });
+
+// 5
+ var toDos = [
+  "Закончить писать эту книгу",
+  "Вывести Грейси на прогулку в парк",
+  "Ответить на электронные письма",
+  "Подготовиться к лекции в понедельник",
+  "Обновить несколько новых задач",
+  "Купить продукты"
+ ];
+ $(".quest__tabs .quest__tab").toArray().forEach(function (element) {
+ // создаем обработку щелчков для этого элемента
+  $(element).on("click", function () {
+ // поскольку мы используем версию элемента jQuery,
+ // нужно создать временную переменную,
+ // чтобы избежать постоянного обновления
+   var $element = $(element);
+   var $content;
+   $(".quest__tabs .quest__tab").removeClass("quest__tab_active");
+   $element.addClass("quest__tab_active");
+   $(".main .quest__content").empty();
+    if ($element.parent().is(":nth-child(1)")) {
+      console.log("Щелчок на первой вкладке!");
+    } else if ($element.parent().is(":nth-child(2)")) {
+      console.log("Щелчок на второй вкладке!");
+    } else if ($element.parent().is(":nth-child(3)")) {
+      console.log("Щелчок на третьей вкладке!");
+    }
+   return false;
+  });
  });
 };
 $(document).ready(main);
