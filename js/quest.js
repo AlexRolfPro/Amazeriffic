@@ -74,26 +74,47 @@ var main = function () {
    var $element = $(element);
    var $content;
    var i;
+   var $questInput;
+   var $questButton;
+   var $newQuest;
    $(".quest__tabs .quest__tab").removeClass("quest__tab_active");
-   $element.addClass("quest__tab_active");
-   $(".main .quest__content").empty();
+   $element.addClass("quest__tab_active"); // active clicked tab
+   $(".main .quest__content").empty(); // clean content
     if ($element.parent().is(":nth-child(1)")) {
       $content = $("<ul>");
-      for (i = toDos.length - 1; i >= 0; i--) {
-       $content.append($("<li>").text(toDos[i]));
-       $(".main .quest__content").append($content);
+      for (i = toDos.length - 1; i >= 0; i--) { // массив в обратном порядке, последняя запись будет первой
+       $content.append($("<li>").text(toDos[i])); // добавляем в элементы списка, значения из массива
+       $(".main .quest__content").append($content); // добавляем список в DOM дерево
       }
     } else if ($element.parent().is(":nth-child(2)")) {
       $content = $("<ul>");
-      toDos.forEach(function (toDo) {
+      toDos.forEach(function (toDo) { //выводим весь массив от начала до конца
        $content.append($("<li>").text(toDo));
       });
       $(".main .quest__content").append($content);
     } else if ($element.parent().is(":nth-child(3)")) {
-      console.log("Щелчок на третьей вкладке!");
+      $questInput = $("<input type='text'>"); //add input tag to html
+      $questButton = $("<button>").text("+"); //add button tag to html
+      $(".main .quest__input").append($questInput, $questButton);
+      var addCommentFromInputBox = function () { //mouse click
+        if($(".quest__input input").val() !== "") { //input not empty
+          $newQuest = $(".quest__input input").val(); //get input quest
+          toDos.push($newQuest); // add input value to array
+          $(".quest__input input").val(""); //clear input area
+        }
+       };
+         $(".quest__input button").on("click", function (event) { //mouse click
+          addCommentFromInputBox();
+          });
+         $(".quest__input input").on("keypress", function (event) { // press "Enter"
+          if (event.keyCode === 13) {
+          addCommentFromInputBox();
+          }
+        });
     }
    return false;
   });
  });
+ $(".quest__tabs a:first-child .quest__tab").trigger("click");
 };
 $(document).ready(main);
