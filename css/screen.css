@@ -1,0 +1,51 @@
+/*
+Error: Invalid CSS after "$colorBase ": expected ":", was "= red;"
+        on line 8 of G:/wamp64/www/Amazeriffic/sass/screen.scss
+
+3:  * Import this file using the following HTML or equivalent:
+4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> *\/
+5: 
+6: @import "compass/reset";
+7: 
+8: $colorBase = red;
+9: 
+10: h1 {
+11:   color: $colorBase;
+12: }
+
+Backtrace:
+G:/wamp64/www/Amazeriffic/sass/screen.scss:8
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:628:in `variable'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `call'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+C:/Ruby22/bin/compass:23:in `load'
+C:/Ruby22/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$colorBase \": expected \":\", was \"= red;\"\A         on line 8 of G:/wamp64/www/Amazeriffic/sass/screen.scss\A \A 3:  * Import this file using the following HTML or equivalent:\A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";\A 7: \A 8: $colorBase = red;\A 9: \A 10: h1 {\A 11:   color: $colorBase;\A 12: }"; }
